@@ -1,0 +1,18 @@
+# Asking for promting
+- name: vars promting
+  hosts: web
+  vars-prompt: 
+  - name: COURSE
+    prompt: Please enter the course
+    private: false # not confidential
+  - name: DURATION
+    prompt: Please enter the course Duration
+    private: false
+  - name: TRAINER
+    prompt: Please enter trainer
+    private: false
+  tasks:
+  - name: Print course information
+    ansible.builtin.debug:
+      msg: This is {{COURSE}} trainer:{{TRAINER}} and duration is {{DURATION}}
+  
