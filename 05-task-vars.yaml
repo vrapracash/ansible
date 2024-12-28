@@ -1,0 +1,17 @@
+# Task with Variables
+- name: Using tasks with variables
+  host: web
+  vars: 
+    COURSE: Devops with AWS
+    DURATION: 1540HRS
+    TRAINER: Sivakumar M
+  tasks:
+  - name: Print information
+    ansible.builtin.debug:
+      msg: "Hi I am learning {{COURSE}}, Duration is: {{DURATION}} and trainer is {{TRAINER}}"
+
+  - name: Print more info
+    vars:
+      COURSE: Ansible
+    ansible.builtin.package:
+      msg: "Hi I am learning {{COURSE}}, Duration is: {{DURATION}} and trainer is {{TRAINER}}"
