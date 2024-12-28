@@ -1,0 +1,8 @@
+# variables
+- name: variables
+  host: web
+  vars:
+    COURSE: Devops with AWS
+    DURATION: 120HRS
+    TRAINER: Sivakumar M
+  
