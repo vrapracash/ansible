@@ -1,0 +1,17 @@
+# Prompt true 
+- name: prompting with true
+  hosts: web
+  vars-prompt:
+  - name: COURSE
+    prompt: Enter course name
+    private: true
+  - name: DURATION
+    prompt: Enter course duration
+    private: true
+  - name: TRAINER
+    prompt: Enter course trainer
+    private: true
+  tasks:
+    - name: Print course information
+      ansible.builtin.debug:
+        msg: "I am learning {{COURSE}}, Duration:{{DURATION}} and trainer is {{TRAINER}}"
