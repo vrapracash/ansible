@@ -5,4 +5,7 @@
     COURSE: Devops with AWS
     DURATION: 120HRS
     TRAINER: Sivakumar M
+  tasks:
+    ansible.builtin.debug:
+    msg: "Hi my name is {{TRAINER}}, I am teaching {{COURSE}} Duration will be {{DURATION}}"
   
