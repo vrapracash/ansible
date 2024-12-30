@@ -1,0 +1,28 @@
+- name: variables to print
+  hosts: web
+  vars:
+    COURSE: "Devops with AWS from play level"
+    TRAINER: "Sivakumar M"
+    DURATION: "120HRS"
+  vars_files:
+  - vars.yaml
+  vars-prompt:
+  - name: COURSE
+    prompt: Please enter the course name
+    private: false
+  tasks:
+  - name: "Print the information"
+    vars:
+    COURSE: "DevOps with AWS"
+    DURATION: "120HRS"
+    TRAINER: "Sivakumar M"
+    ansible.builtin.debug:
+    msg: "Hi I am learning {{COURSE}}"
+
+    # 1. Command Line
+    # 2. Task level
+    # 3. files
+    # 4. prompt
+    # 5. play
+    # 6. inventory
+    # 7. Roles
