@@ -4,4 +4,49 @@
   tasks:
   - name: print default variables
     ansible.builtin.debug:
-      msg:
+      msg: "Hello {{ course | default ('Ansible') }}"
+
+  - name: print uppercase
+    vars:
+      greeting: "Hello Ramesh"
+    ansible.builtin.debug:
+      msg: " {{ greeting | upper }} "
+  - name: print lowercase
+    vars:
+      greeting: "Hello Suresh"
+    ansible.builtin.debug:
+      msg: " {{ greeting | lower }} "
+  - name: Unique numbers
+    vars:
+     numbers: [1,2,3,44,55,32,5,2,3,44,32]
+    ansible.builtin.debug:
+      msg: " {{ numbers | unique }} "
+  - name: get min and max  numbers
+    vars:
+     numbers: [1,2,3,44,55,32,5,2,3,44,32]
+    ansible.builtin.debug:
+      msg: " Min: {{ numbers | min }}, Max: {{ numbers | max }} "
+  - name: convert map to list
+    vars: 
+      course:
+       name: "Devops with AWS"
+       duration: 120
+       trainer: "Sivakumar M"
+    ansible.builtin.debug:
+      msg: "{{ course | dict2items }}"
+  
+  - name: convert list to map
+    vars:
+      course:
+      - { "key": "name","value": "Devops with AWS" }
+      - { "key": "duration","value": "120" }
+      - { "key": "trainer","value": "Sivakumar M" }
+    ansible.builtin.debug:
+      msg: "{{ course | items2dict }}"
+
+  - name: check ip address
+    vars:
+      myip: "356.168.1.1"
+    ansible.builtin.debug:
+      msg: "{{ myip | ansible.utils.ipv4 }}"
+      
