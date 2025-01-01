@@ -6,7 +6,7 @@
     DURATION: "120HRS"
   vars_files:
   - vars.yaml
-  vars-prompt:
+  vars_prompt:
   - name: COURSE
     prompt: Please enter the course name
     private: false
