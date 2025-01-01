@@ -1,6 +1,6 @@
 # variables
 - name: variables
-  host: web
+  hosts: web
   vars:
     COURSE: Devops with AWS
     DURATION: 120HRS
