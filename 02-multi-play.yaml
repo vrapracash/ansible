@@ -8,7 +8,7 @@
 
 # PLAY 02
 - name: PLAY-02
-  host: web
+  hosts: web
   tasks:
   - name: PLAY-02 TASK-01
     ansible.builtin.debug:
