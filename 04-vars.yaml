@@ -6,6 +6,7 @@
     DURATION: "120HRS"
     TRAINER: "Sivakumar M"
   tasks:
+  - name: print course info
     ansible.builtin.debug:
       msg: "Hi my name is {{TRAINER}}, I am teaching {{COURSE}} Duration will be {{DURATION}}"
   
