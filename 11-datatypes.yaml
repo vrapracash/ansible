@@ -11,14 +11,14 @@
     - Terraform
     - AWS
     - K8
-  live: true #boolean
-  tools: #map/dictionary
-    ci: jenkins
-    cm: ansible
-    cloud: AWS
-    aws:
-      - IAM 
-      - S3
+    live: true #boolean
+    tools: #map/dictionary
+      ci: jenkins
+      cm: ansible
+      cloud: AWS
+      aws:
+        - IAM 
+        - S3
 - tasks:
   - name: Print information
     ansible.builtin.debug:
