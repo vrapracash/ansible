@@ -1,6 +1,6 @@
 - name: ping the node
   hosts: web # connects to host ansible nodes
-  task: #list of task to be associated
+  tasks: #list of task to be associated
   - name: ping the server
     ansible.builtin.ping:
   
