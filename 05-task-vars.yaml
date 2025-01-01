@@ -13,8 +13,9 @@
   - name: Print more info
     vars:
       COURSE: Ansible
-    ansible.builtin.package:
+    ansible.builtin.debug:
       msg: "Hi I am learning {{COURSE}}, Duration is: {{DURATION}} and trainer is {{TRAINER}}"
+
   - name: Print actual info
     ansible.builtin.debug:
       msg: "Hi I am Learning {{COURSE}}, Duration is: {{DURATION}} and Trainer is {{TRAINER}}"
