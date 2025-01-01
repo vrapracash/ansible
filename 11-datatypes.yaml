@@ -16,7 +16,10 @@
     ci: jenkins
     cm: ansible
     cloud: AWS
-    aws: 
+    aws:
       - IAM 
       - S3
-      
+- tasks:
+  - name: Print information
+    ansible.builtin.debug:
+      msg:"Hi I am learning {{ course }}  duration: {{ duration }}  topics are : {{ topics }}
