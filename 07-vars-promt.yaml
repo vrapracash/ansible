@@ -1,7 +1,7 @@
 # Asking for promting
 - name: variables promting
   hosts: web
-  vars-prompt: 
+  vars_prompt: 
   - name: COURSE
     prompt: Please enter the course
     private: false # not confidential
