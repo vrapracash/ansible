@@ -1,6 +1,6 @@
 # Install nginx
 - name: Install nginx and run
-  host: web
+  hosts: web
   become: yes # take sudo access
   tasks:
   - name: install nginx
