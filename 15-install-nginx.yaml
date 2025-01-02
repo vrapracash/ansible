@@ -13,8 +13,8 @@
       state: present
     when: ansible_os_family == "Redhat"
 
-  - name: Install nginx if "Debian"
-    ansible.builtin.apt:
-      name: nginx
-      state: present
-    when: ansible_os_family == "Debian"
+  # - name: Install nginx if "Debian"
+  #   ansible.builtin.apt:
+  #     name: nginx
+  #     state: present
+  #   when: ansible_os_family == "Debian"
