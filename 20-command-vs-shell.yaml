@@ -5,11 +5,11 @@
   - name: execute the command
     ansible.builtin.shell: ls -ltr > /tmp/output.txt
 
-  - name: check process
+  - name: check process1
     ansible.builtin.shell: ps -ef | grep ssh 
     register: output
   
-  - name: check the process
+  - name: check the process2
     ansible.builtin.command: ps -ef | grep ssh
     register: output
     
