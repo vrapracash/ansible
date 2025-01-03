@@ -3,9 +3,9 @@
   connection: local
 
   vars:
-    subnet_id: "subnet-0e6a016823adf702c" # place your subnet id 
-    sg_id: "sg-0bfc14741c51ad341"
-    ami_id: "ami-09c813fb71547fc4f"
+    subnet_id: "subnet-0e6a016823adf702c" # place your subnet id subnet-0e6a016823adf702c
+    sg_id: "sg-0bfc14741c51ad341" #sg-0bfc14741c51ad341
+    ami_id: "ami-09c813fb71547fc4f" #ami-09c813fb71547fc4f
     instances:
     - mysql
     - backend
