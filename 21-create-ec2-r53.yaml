@@ -1,7 +1,6 @@
 - name: create ec2 and route53 records
   hosts: local
   connection: local
-  become: yes
 
   vars:
     subnet_id: "subnet-0e6a016823adf702c" # place your subnet id subnet-0e6a016823adf702c
